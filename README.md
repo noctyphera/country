@@ -14,7 +14,7 @@ docker compose up --build -d
 
 ```sh
 python3 -m venv .venv
-.venv/bin/pip install -c requirements.lock -e '.[test]'
+.venv/bin/pip install -c requirements.txt -e '.[test]'
 .venv/bin/alembic upgrade head
 .venv/bin/python -m game
 ```

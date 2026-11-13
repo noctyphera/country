@@ -8,7 +8,7 @@ ENV TZ=Europe/Moscow \
 WORKDIR /app
 COPY pyproject.toml requirements.lock ./
 COPY game ./game
-RUN pip install -c requirements.lock . && useradd --create-home --uid 10001 countrybot
+RUN pip install -c requirements.txt . && useradd --create-home --uid 10001 countrybot
 COPY config ./config
 COPY alembic.ini ./
 COPY migrations ./migrations
