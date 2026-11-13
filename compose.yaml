@@ -1,0 +1,67 @@
+x-game: &game
+  build: .
+  image: president-country-bot:local
+  restart: unless-stopped
+  environment: &game-environment
+    DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-country}:${POSTGRES_PASSWORD:-country}@db:5432/${POSTGRES_DB:-country}
+    TZ: Europe/Moscow
+    GAME_CONFIG_DIR: /app/config
+    LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  volumes:
+    - ./config:/app/config:ro
+  init: true
+  stop_grace_period: 30s
+
+services:
+  db:
+    image: postgres:16-alpine
+    command: ["postgres", "-c", "timezone=Europe/Moscow", "-c", "log_timezone=Europe/Moscow"]
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-country}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-country}
+      POSTGRES_DB: ${POSTGRES_DB:-country}
+    volumes:
+      - country-data:/var/lib/postgresql/data
+    ports:
+      - 127.0.0.1:${POSTGRES_PORT:-5432}:5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  migrate:
+    <<: *game
+    restart: "no"
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+  bot:
+    <<: *game
+    command: ["python", "-m", "game"]
+    environment:
+      <<: *game-environment
+      BOT_TOKEN: ${BOT_TOKEN:-}
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      db:
+        condition: service_healthy
+
+  worker:
+    <<: *game
+    command: ["python", "-m", "game.worker"]
+    environment:
+      <<: *game-environment
+      WORKER_POLL_SECONDS: ${WORKER_POLL_SECONDS:-5}
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      db:
+        condition: service_healthy
+
+volumes:
+  country-data:

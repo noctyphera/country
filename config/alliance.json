@@ -1,0 +1,32 @@
+{
+  "alliance": {
+    "max_members": 10,
+    "name_min_length": 3,
+    "name_max_length": 24,
+    "creation_money": 25000,
+    "max_quantity": 100000000,
+    "ranking_limit": 10,
+    "war_duration_hours": 4,
+    "war_cooldown_hours": 8,
+    "war_min_power": 30,
+    "match_power_tolerance": 0.3,
+    "win_probability_min": 0.25,
+    "win_probability_max": 0.75,
+    "war_loss_min": 0.04,
+    "war_loss_max": 0.08,
+    "npc_reward_fraction": 0.15,
+    "real_loot_fraction": 0.12,
+    "real_loot_equipment_cap": 0.2,
+    "resolve_batch_size": 50,
+    "npc_names": [
+      "Orion",
+      "Astra",
+      "Vega",
+      "Nova",
+      "Helios"
+    ],
+    "reward_multiplier": 1.5,
+    "loser_retention": 0.2,
+    "invitation_hours": 1
+  }
+}

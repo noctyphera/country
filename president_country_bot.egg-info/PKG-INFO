@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: president-country-bot
+Version: 1.0.0
+Summary: Transactional Telegram country strategy game
+Requires-Python: >=3.12
+Requires-Dist: aiogram<4,>=3.22
+Requires-Dist: SQLAlchemy[asyncio]<2.1,>=2.0.43
+Requires-Dist: asyncpg<1,>=0.30
+Requires-Dist: alembic<2,>=1.16
+Requires-Dist: python-dotenv<2,>=1.1
+Provides-Extra: test
+Requires-Dist: pytest<10,>=8; extra == "test"
+Requires-Dist: pytest-asyncio<2,>=1; extra == "test"
+Requires-Dist: aiosqlite<1,>=0.21; extra == "test"
+Requires-Dist: ruff<1,>=0.12; extra == "test"

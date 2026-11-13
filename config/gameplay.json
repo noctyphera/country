@@ -1,0 +1,208 @@
+{
+  "country": {
+    "name_min": 3,
+    "name_max": 24,
+    "ranking_limit": 20,
+    "initial_hunger": 100,
+    "initial_army_hunger": 100,
+    "initial_spy_level": 1,
+    "initial_hacker_level": 0,
+    "initial_energy_level": 1,
+    "initial_energy_condition": 100
+  },
+  "recruitment": {
+    "maximum_share": 0.1,
+    "minimum_civilians": 100,
+    "money_per_soldier": 12,
+    "food_per_soldier": 2
+  },
+  "expansion": {
+    "land_per_purchase": 10,
+    "money": 900,
+    "wood": 100,
+    "stone": 80,
+    "scaling_land": 100
+  },
+  "independence": {
+    "population": 300,
+    "military_power": 100,
+    "gdp": 8.0,
+    "money": 2000
+  },
+  "intelligence": {
+    "max_level": 10,
+    "spy_training_money": 100,
+    "spy_training_food": 5,
+    "spy_research_money": 1500,
+    "spy_research_cost": {
+      "iron": 150,
+      "gold": 20
+    },
+    "hack_research_money": 2500,
+    "hack_research_cost": {
+      "iron": 100,
+      "gold": 40,
+      "diamond": 5
+    },
+    "spy_base_chance": 0.3,
+    "spy_level_chance": 0.045,
+    "spy_per_agent_chance": 0.002,
+    "spy_agent_bonus_cap": 0.1,
+    "spy_defense_per_level": 0.015,
+    "spy_max_chance": 0.8,
+    "spy_min_chance": 0.1,
+    "spy_theft_share": 0.025,
+    "spy_capacity_per_agent": 15,
+    "spy_cooldown_hours": 6,
+    "spy_death_share": 0.05,
+    "hack_base_chance": 0.2,
+    "hack_level_chance": 0.06,
+    "hack_max_chance": 0.85,
+    "hack_cooldown_hours": 4,
+    "new_player_protection_hours": 24,
+    "gdp_tolerance": 0.3
+  },
+  "space": {
+    "duration_hours": 24,
+    "cooldown_hours": 12,
+    "explosion_chance": 0.15,
+    "rocket_money": 50000,
+    "rocket_cost": {
+      "iron": 5000,
+      "oil": 1500,
+      "gold": 500,
+      "diamond": 100
+    },
+    "rewards": {
+      "stellarite": [
+        12,
+        24
+      ],
+      "antimatter": [
+        3,
+        8
+      ],
+      "xenocrystal": [
+        6,
+        15
+      ]
+    },
+    "items": {
+      "quantum_core": {
+        "name": "Квантовое ядро",
+        "money": 5000,
+        "cost": {
+          "stellarite": 10,
+          "antimatter": 3,
+          "xenocrystal": 5
+        },
+        "sell_price": 45000
+      },
+      "warp_relic": {
+        "name": "Реликвия гиперпространства",
+        "money": 12000,
+        "cost": {
+          "stellarite": 20,
+          "antimatter": 6,
+          "xenocrystal": 10
+        },
+        "sell_price": 110000
+      },
+      "lightsaber": {
+        "name": "Световой меч",
+        "money": 5000,
+        "cost": {
+          "xenocrystal": 8,
+          "antimatter": 2
+        },
+        "sell_price": 60000
+      },
+      "arc_core": {
+        "name": "Дуговой реактор",
+        "money": 5000,
+        "cost": {
+          "stellarite": 15,
+          "antimatter": 4
+        },
+        "sell_price": 80000
+      },
+      "tesseract": {
+        "name": "Тессеракт",
+        "money": 5000,
+        "cost": {
+          "xenocrystal": 20,
+          "antimatter": 10
+        },
+        "sell_price": 180000
+      },
+      "spice": {
+        "name": "Пряность",
+        "money": 5000,
+        "cost": {
+          "stellarite": 6,
+          "xenocrystal": 4
+        },
+        "sell_price": 30000
+      }
+    }
+  },
+  "market": {
+    "system_buy_multiplier": 1.3,
+    "system_sell_multiplier": 0.7,
+    "max_open_orders": 20,
+    "page_size": 8,
+    "transfer_min_age_hours": 24,
+    "transfer_daily_absolute": 20000,
+    "transfer_daily_tax_hours": 12,
+    "transfer_max_balance_share": 0.25,
+    "transfer_fee_share": 0.03,
+    "transfer_window_hours": 24,
+    "unit_prices": {
+      "tank": 391,
+      "helicopter": 927,
+      "fighter": 1822
+    },
+    "unit_import_multiplier": 1.05,
+    "unit_export_multiplier": 0.95
+  },
+  "energy": {
+    "max_level": 5,
+    "upgrade_money": 15000,
+    "upgrade_cost": {
+      "iron": 1000,
+      "gold": 100,
+      "diamond": 20
+    },
+    "maintenance_money": 800,
+    "maintenance_cost": {
+      "iron": 100,
+      "oil": 50
+    },
+    "maintenance_restore": 40,
+    "condition_max": 100,
+    "maintenance_station_weights": {
+      "solar": 1,
+      "nuclear": 3
+    },
+    "solar_income": 1800,
+    "nuclear_income": 12000,
+    "uranium_per_nuclear": 2,
+    "level_bonus": 0.15,
+    "wear_per_hour": 1,
+    "condition_min": 0,
+    "price_per_kwh": 2,
+    "solar_kwh": 900,
+    "nuclear_kwh": 6000
+  },
+  "country_war": {
+    "power_tolerance": 0.3,
+    "duration_hours": 3,
+    "shield_hours": 12,
+    "cooldown_hours": 8,
+    "loot_share": 0.04,
+    "loss_share": 0.03,
+    "strength_advantage": 0.1,
+    "minimum_power": 20,
+    "batch_size": 50
+  }
+}

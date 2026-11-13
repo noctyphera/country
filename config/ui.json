@@ -1,0 +1,13 @@
+{
+  "ui": {
+    "input_timeout_seconds": 900,
+    "max_input_integer": 1000000000,
+    "max_input_length": 64,
+    "page_size": 8,
+    "events_limit": 6,
+    "message_limit": 3900,
+    "polling_timeout": 30,
+    "request_timeout": 45,
+    "max_input_id": 9223372036854775807
+  }
+}

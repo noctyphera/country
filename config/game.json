@@ -1,0 +1,395 @@
+{
+  "resources": {
+    "wood": {
+      "name": "Доски",
+      "price": 3,
+      "tradable": true
+    },
+    "stone": {
+      "name": "Камень",
+      "price": 4,
+      "tradable": true
+    },
+    "iron": {
+      "name": "Железо",
+      "price": 9,
+      "tradable": true
+    },
+    "gold": {
+      "name": "Золото",
+      "price": 35,
+      "tradable": true
+    },
+    "diamond": {
+      "name": "Алмазы",
+      "price": 120,
+      "tradable": true
+    },
+    "food": {
+      "name": "Провиант",
+      "price": 2,
+      "tradable": true
+    },
+    "water": {
+      "name": "Вода",
+      "price": 1,
+      "tradable": true
+    },
+    "oil": {
+      "name": "Нефть",
+      "price": 12,
+      "tradable": true
+    },
+    "uranium": {
+      "name": "Уран",
+      "price": 90,
+      "tradable": true
+    },
+    "electronics": {
+      "name": "Электроника",
+      "price": 25,
+      "tradable": true
+    },
+    "rocket": {
+      "name": "Ракета",
+      "price": 150000,
+      "tradable": false
+    },
+    "stellarite": {
+      "name": "Стелларит",
+      "price": 3000,
+      "tradable": false
+    },
+    "antimatter": {
+      "name": "Антиматерия",
+      "price": 8000,
+      "tradable": false
+    },
+    "xenocrystal": {
+      "name": "Ксенокристалл",
+      "price": 5000,
+      "tradable": false
+    },
+    "quantum_core": {
+      "name": "Квантовое ядро",
+      "price": 100000,
+      "tradable": false
+    },
+    "warp_relic": {
+      "name": "Реликвия искривления",
+      "price": 240000,
+      "tradable": false
+    },
+    "lightsaber": {
+      "name": "Световой меч",
+      "price": 60000,
+      "tradable": false
+    },
+    "arc_core": {
+      "name": "Дуговой реактор",
+      "price": 80000,
+      "tradable": false
+    },
+    "tesseract": {
+      "name": "Тессеракт",
+      "price": 180000,
+      "tradable": false
+    },
+    "spice": {
+      "name": "Пряность",
+      "price": 30000,
+      "tradable": false
+    }
+  },
+  "buildings": {
+    "lumber": {
+      "name": "Лесопилка",
+      "resource": "wood",
+      "output": 50,
+      "land": 1,
+      "money": 500,
+      "cost": {
+        "wood": 80,
+        "stone": 40
+      },
+      "independent": false
+    },
+    "quarry": {
+      "name": "Каменоломня",
+      "resource": "stone",
+      "output": 35,
+      "land": 1,
+      "money": 650,
+      "cost": {
+        "wood": 100,
+        "stone": 50
+      },
+      "independent": false
+    },
+    "iron_mine": {
+      "name": "Железный рудник",
+      "resource": "iron",
+      "output": 15,
+      "land": 2,
+      "money": 1200,
+      "cost": {
+        "wood": 120,
+        "stone": 160
+      },
+      "independent": false
+    },
+    "gold_mine": {
+      "name": "Золотой прииск",
+      "resource": "gold",
+      "output": 3,
+      "land": 2,
+      "money": 3000,
+      "cost": {
+        "wood": 200,
+        "stone": 200,
+        "iron": 80
+      },
+      "independent": false
+    },
+    "diamond_mine": {
+      "name": "Алмазная шахта",
+      "resource": "diamond",
+      "output": 1,
+      "land": 3,
+      "money": 7000,
+      "cost": {
+        "stone": 500,
+        "iron": 180
+      },
+      "independent": true
+    },
+    "farm": {
+      "name": "Ферма",
+      "resource": "food",
+      "output": 120,
+      "land": 2,
+      "money": 700,
+      "cost": {
+        "wood": 120,
+        "stone": 40
+      },
+      "independent": false
+    },
+    "well": {
+      "name": "Водозабор",
+      "resource": "water",
+      "output": 180,
+      "land": 1,
+      "money": 600,
+      "cost": {
+        "wood": 50,
+        "stone": 100
+      },
+      "independent": false
+    },
+    "oil_rig": {
+      "name": "Нефтяная вышка",
+      "resource": "oil",
+      "output": 10,
+      "land": 2,
+      "money": 2500,
+      "cost": {
+        "stone": 200,
+        "iron": 100
+      },
+      "independent": false
+    },
+    "uranium_mine": {
+      "name": "Урановый рудник",
+      "resource": "uranium",
+      "output": 2,
+      "land": 3,
+      "money": 12000,
+      "cost": {
+        "stone": 600,
+        "iron": 350
+      },
+      "independent": true
+    },
+    "electronics_factory": {
+      "name": "Завод электроники",
+      "resource": "electronics",
+      "output": 6,
+      "land": 2,
+      "money": 4500,
+      "cost": {
+        "stone": 250,
+        "iron": 180,
+        "gold": 20
+      },
+      "independent": false
+    },
+    "house": {
+      "name": "Жилой дом",
+      "output": 0,
+      "land": 1,
+      "money": 250,
+      "cost": {
+        "wood": 60,
+        "stone": 30
+      },
+      "independent": false
+    },
+    "solar": {
+      "name": "Солнечная станция",
+      "output": 0,
+      "land": 3,
+      "money": 20000,
+      "cost": {
+        "iron": 400,
+        "electronics": 150
+      },
+      "independent": true
+    },
+    "nuclear": {
+      "name": "АЭС",
+      "output": 0,
+      "land": 5,
+      "money": 100000,
+      "cost": {
+        "stone": 2000,
+        "iron": 1500,
+        "electronics": 500
+      },
+      "independent": true
+    }
+  },
+  "units": {
+    "tank": {
+      "name": "Танк",
+      "power": 3,
+      "money": 150,
+      "cost": {
+        "iron": 25,
+        "oil": 5
+      }
+    },
+    "helicopter": {
+      "name": "Вертолёт",
+      "power": 6,
+      "money": 350,
+      "cost": {
+        "iron": 40,
+        "oil": 10,
+        "electronics": 8
+      }
+    },
+    "fighter": {
+      "name": "Истребитель",
+      "power": 10,
+      "money": 700,
+      "cost": {
+        "iron": 65,
+        "oil": 20,
+        "electronics": 20
+      }
+    }
+  },
+  "initial": {
+    "money": 15000,
+    "population": 200,
+    "land": 100,
+    "buildings": {
+      "lumber": 10,
+      "quarry": 4,
+      "iron_mine": 2,
+      "farm": 3,
+      "well": 2,
+      "house": 60
+    },
+    "resources": {
+      "wood": 2000,
+      "stone": 1500,
+      "iron": 600,
+      "gold": 50,
+      "diamond": 0,
+      "food": 3000,
+      "water": 4000,
+      "oil": 200,
+      "uranium": 0,
+      "electronics": 150
+    }
+  },
+  "economy": {
+    "house_capacity": 4,
+    "tax_per_person": 2,
+    "food_per_civilian": 1,
+    "water_per_civilian": 1,
+    "food_per_soldier": 3,
+    "hunger_recovery": 12,
+    "hunger_decay": 15,
+    "starvation_threshold": 20,
+    "starvation_rate": 0.02,
+    "births_base": 1,
+    "births_per_house": 0.03,
+    "births_per_factory": 0.04,
+    "births_max": 20,
+    "births_hunger_min": 60,
+    "income_population_floor": 100,
+    "ranking_money_weight": 0.001,
+    "ranking_power_weight": 1,
+    "ranking_gdp_weight": 5,
+    "food_per_percent_civilian": 0.01,
+    "food_per_percent_army": 0.03
+  },
+  "jobs": {
+    "production_seconds": 900,
+    "income_seconds": 3600,
+    "disaster_seconds": 60,
+    "war_seconds": 30,
+    "poll_seconds": 5,
+    "max_catchup_ticks": 4,
+    "event_retention_days": 30
+  },
+  "disasters": {
+    "min_damage": 0.02,
+    "max_damage": 0.04,
+    "kinds": [
+      "virus",
+      "meteor",
+      "aliens",
+      "fire",
+      "earthquake"
+    ],
+    "timezone": "Europe/Moscow"
+  },
+  "limits": {
+    "quantity": 1000000,
+    "top": 20,
+    "event_page_size": 10
+  },
+  "ui_order": [
+    "wood",
+    "stone",
+    "iron",
+    "gold",
+    "diamond",
+    "food",
+    "water",
+    "oil",
+    "uranium",
+    "electronics",
+    "rocket",
+    "stellarite",
+    "antimatter",
+    "xenocrystal",
+    "quantum_core",
+    "warp_relic",
+    "tank",
+    "helicopter",
+    "fighter"
+  ],
+  "display": {
+    "timezone": "Europe/Moscow"
+  },
+  "notifications": {
+    "poll_seconds": 2,
+    "retry_seconds": 30,
+    "batch_size": 20
+  }
+}
